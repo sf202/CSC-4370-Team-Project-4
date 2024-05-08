@@ -34,4 +34,8 @@ Please refer to Project4_PropertY-hub_fa2301INSTRUCTIONS.pdf.
 8. Proximity to main roads 
 9. Property tax records - calculate 7% of value If the user hasn’t registered any property previously there should be a card with a + Symbol suggesting to add the new property to the platform. Implement some logic to emphasized that they must click the + symbol 
 - Fetch all the properties from DB.
-- List them in the form of cards. Card: ○ Each card must have an image. The main details like the location, price, etc. ○ Once the user clicks on the card. The user must be redirected to the complete details of the property. ○ The user should be able to update the property details in the complete video of the property details page. ○ The user should be able to delete the listed property. BE: Once the seller adds a property to the platform, store all the details in the property table in the DB with the foreign key user owning the property. Design your DB Schema as per your convenience but the above-mentioned point is just a suggestion and best practice.
+- List them in the form of cards. Card: ○ Each card must have an image. The main details like the location, price, etc.
+-  Once the user clicks on the card. The user must be redirected to the complete details of the property.
+-   The user should be able to update the property details in the complete video of the property details page.
+-  The user should be able to delete the listed property. BE: Once the seller adds a property to the platform, store all the details in the property table in the DB with the foreign key user owning the property.
+-   Design your DB Schema as per your convenience but the above-mentioned point is just a suggestion and best practice.
