@@ -1,42 +1,64 @@
 # For Instructions 
 Please refer to Project4_PropertY-hub_fa2301INSTRUCTIONS.pdf. 
 
+# Objectives 
+## Milestone 1: Home Page and User Registration 
+ ### Home Page:
+ Design a generic home page (similar to an "About" page) to include:
 
-# Objectives
-**Milestone**
--Home page and User Registration. Home Page: Design a generic home page describing: (same concept as an About page
-- Description of your project. 
-- User Registration 1. Now as a team, you have discussed what kind of users your platform will be having. 
-- Users: Buyers and Sellers. You also wanted to add an Admin user to analyze your business
-- This Portal must handle the registrations and login of all the users. Front End (FE):
-- Design a signup page with all the required form fields. For example first name, last name, email id, username, etc. Make sure you collect all the form data that is required from the users to run your business effectively. 
-- Handle all the form validations. Back-End (BE): 
-- Design your DB Schema. 
-- Store the all the required data in the database 
-- Make sure you are encrypting the passwords when you store them in the DB
+Project Description: Provide an overview of the platform.
 
-**Milestone**
-- User Login: Once the new user is registered successfully the user must be redirected automatically to the login page. FE + BE: 
-- Design and develop your login page.
-- If the user exits after verification of the password fetched from the DB you should redirect the user to his dashboard to officially sign in. Redirecting Rules: 
-- If the user is a seller, redirect the user to the seller dashboard. 
-- If the user is a buyer, redirect the buyer to the buyer dashboard. 
-- If the user is an admin, redirect the admin to the admin dashboard. Make use of the session’s concepts for example in the general situation : 1. The session id is sent to the user when his session is created.
--  It will store a cookie (called, by default, PHPSESSID…etc…) 3. The cookie is sent by the browser to the server with each request 4. The server (PHP) uses that cookie, containing the session_id, to know which file corresponds to that user.
+### User Registration:
+Define user roles: Buyers, Sellers, and Admin (to analyze business activities).
+The portal must handle registration and login for all users.
+Front-End (FE):
+Create a signup page with form fields such as first name, last name, email, username, etc.
+Ensure comprehensive form validations for accurate data collection.
+Back-End (BE):
+Design the database schema to store all user data.
+Implement password encryption before storing credentials.
+##  Milestone 2: User Login
+Functionality:
 
-**Milestone**- 3 Seller Dashboard: FE : Once the seller logs into their account the dashboard should list all the properties details also called card(s) tied to that user. For example:
- - The location and age 
-- The floor plan (including the site's square footage) 
-- The number of bedrooms 
-- Additional facilities (such as bathrooms) 
-- Presence of a garden
--Parking availability 
-- Proximity to nearby facilities (such as large towns, schools and colleges) 
-- Proximity to main roads 
-- Property tax records - calculate 7% of value If the user hasn’t registered any property previously there should be a card with a + Symbol suggesting to add the new property to the platform. - Implement some logic to emphasized that they must click the + symbol 
-- Fetch all the properties from DB.
-- List them in the form of cards. Card: ○ Each card must have an image. The main details like the location, price, etc.
--  Once the user clicks on the card. The user must be redirected to the complete details of the property.
--   The user should be able to update the property details in the complete video of the property details page.
--  The user should be able to delete the listed property. BE: Once the seller adds a property to the platform, store all the details in the property table in the DB with the foreign key user owning the property.
--   Design your DB Schema as per your convenience but the above-mentioned point is just a suggestion and best practice.
+After successful registration, redirect users to the login page.
+
+Verify credentials, and upon success, redirect users based on their role:
+
+Sellers → Seller Dashboard
+
+Buyers → Buyer Dashboard
+
+Admin → Admin Dashboard
+
+Implementation:
+
+Use sessions for user authentication:
+
+Assign a unique session ID upon login.
+
+Use cookies to manage the session and verify user identity on subsequent requests.
+
+##  Milestone 3: Seller Dashboard
+
+## Front-End (FE):
+
+Upon login, the seller dashboard should display all properties listed by the user in card format. Each card should include:
+
+Details: Location, age, floor plan, square footage, number of bedrooms, bathrooms, garden, parking, proximity to facilities, main roads, and property tax (7% of value).
+
+Image: A visual representation of the property.
+
+Interaction:
+
+Clicking a card redirects to the detailed property view.
+
+Sellers can update or delete properties.
+
+If no properties are listed, display a “+” card prompting the seller to add a new property. Use visual cues to encourage interaction.
+
+## Back-End (BE):
+
+Save property details in the database, associating them with the seller via a foreign key.
+
+Design the database schema to align with best practices and support the above functionality.
+
